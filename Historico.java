@@ -39,7 +39,7 @@ public class Historico extends Preguntas{
 		File archivo = new File(nombreArchivo);
 		 
 		try {
-			PrintWriter salida = new PrintWriter(new FileWriter(archivo,true));
+			PrintWriter salida = new PrintWriter(new FileWriter(archivo,true));// Seguir guradando datos de historico sin sobre escribir
 			salida.println(contenido);
 			salida.println(Marcador);
 			salida.close();

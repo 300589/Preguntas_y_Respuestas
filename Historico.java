@@ -17,14 +17,21 @@ public class Historico extends Preguntas{
 
 	public static void creaArchivo(String nombreArchivo) { // Metodo para crear el archivo para el hisorico de datos del juego 
 		File archivo = new File(nombreArchivo);
+		 
 		
 		try {
 			PrintWriter salida = new PrintWriter(archivo);
+			if (!archivo.exists()) {
+	            archivo.createNewFile();
+	        }
 			salida.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace(System.out);
 			
 		
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		} 
 	}
 	

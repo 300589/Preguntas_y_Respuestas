@@ -21,7 +21,7 @@ public class Historico extends Preguntas{
 		
 		try {
 			PrintWriter salida = new PrintWriter(archivo);
-			if (!archivo.exists()) {
+			if (!archivo.exists()) { // Si el archivo ya existe no se crea otra vez 
 	            archivo.createNewFile();
 	        }
 			salida.close();
